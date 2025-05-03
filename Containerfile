@@ -9,7 +9,6 @@ FROM scratch AS default
 COPY --from=builder /out /
 LABEL containers.bootc 1
 LABEL ostree.bootable true
-LABEL bootc.diskimage-builder quay.io/centos-bootc/bootc-image-builder
 ENV container=oci
 STOPSIGNAL SIGRTMIN+3
 CMD ["/sbin/init"]

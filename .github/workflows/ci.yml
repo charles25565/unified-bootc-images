@@ -31,6 +31,10 @@ jobs:
           - tag: a10s
             repo: almalinux10s.repo
             excludes: dnf-bootc dnf-yum rhc
+          - tag: f42
+            repo: fedora42.repo
+          - tag: c10s
+            repo: centosstream10.repo
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
