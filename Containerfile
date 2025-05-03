@@ -1,6 +1,7 @@
 FROM quay.io/centos-bootc/centos-bootc:stream10 AS builder
 RUN rm -rf /etc/yum.repos.d
 COPY ${REPO} /etc/yum.repos.d/${REPO}
+RUN grep -rn rhc /usr/share/doc/bootc-base-imagectl
 RUN for exclude in ${EXCLUDES}; do find /usr/share/doc/bootc-base-imagectl/manifests -iname '*.yaml' | xargs sed -i "s@- ${exclude}@@g"; done 
 RUN /usr/libexec/bootc-base-imagectl build-rootfs --manifest=standard /out
 FROM scratch AS default
