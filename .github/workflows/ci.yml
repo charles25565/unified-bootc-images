@@ -22,20 +22,22 @@ jobs:
     strategy:
       matrix:
         images:
-          - tag: eln
-            repo: eln.repo
-            excludes: dnf-bootc dnf-yum rhc
           - tag: a9
             repo: almalinux9.repo
             excludes: rhc
           - tag: a10s
             repo: almalinux10s.repo
+          - tag: c9s
+            repo: centosstream9.repo
+          - tag: c10s
+            repo: centosstream10.repo
+          - tag: eln
+            repo: eln.repo
+            excludes: dnf-bootc dnf-yum rhc
             excludes: dnf-bootc dnf-yum rhc
           - tag: f42
             repo: fedora42.repo
             excludes: dnf-yum rhc
-          - tag: c10s
-            repo: centosstream10.repo
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
