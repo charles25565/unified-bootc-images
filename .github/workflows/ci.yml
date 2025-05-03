@@ -2,12 +2,16 @@ name: CI
 on:
   push:
     branches: [ "main" ]
-    paths-ignore:
-      - README.md
+    paths:
+      - "*.repo"
+      - "Containerfile"
+      - ".github/workflows/ci.yml"
   pull_request:
     branches: [ "main" ]
-    paths-ignore:
-      - README.md
+    paths:
+      - "*.repo"
+      - "Containerfile"
+      - ".github/workflows/ci.yml"
   schedule:
     - cron: "0 0 * * *"
   workflow_dispatch:
