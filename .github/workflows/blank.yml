@@ -1,0 +1,33 @@
+name: CI
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+jobs:
+  build:
+    permissions:
+      packages: write
+    strategy:
+      matrix:
+        images:
+          - tag: eln
+            repo: eln.repo
+            excludes: dnf-bootc dnf-yum
+          - tag: a9
+            repo: almalinux9.repo
+          - tag: a10s
+            repo: almalinux10s.repo
+            excludes: dnf-bootc dnf-yum
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Login to container registry
+        run: echo ${{secrets.GITHUB_TOKEN}} | podman login -u ${{github.actor}} --password-stdin ghcr.io
+      - name: Build image
+        run: podman build --build-arg repo=${{matrix.images.repo}} --build-arg excludes=${{matrix.images.excludes}} -t ghcr.io/charles25565/universal-bootc-images:${{matrix.images.tag}} .
+      - name: Push image
+        run: podman push ghcr.io/charles25565/universal-bootc-images:${{matrix.images.tag}}
