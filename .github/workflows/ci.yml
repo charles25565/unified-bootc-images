@@ -33,6 +33,7 @@ jobs:
             excludes: dnf-bootc dnf-yum rhc
           - tag: f42
             repo: fedora42.repo
+            excludes: dnf-yum rhc
           - tag: c10s
             repo: centosstream10.repo
     runs-on: ubuntu-24.04
