@@ -19,9 +19,10 @@ jobs:
             excludes: dnf-bootc dnf-yum rhc
           - tag: a9
             repo: almalinux9.repo
+            excludes: rhc
           - tag: a10s
             repo: almalinux10s.repo
-            excludes: dnf-bootc dnf-yum
+            excludes: dnf-bootc dnf-yum rhc
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
