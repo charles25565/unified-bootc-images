@@ -16,7 +16,7 @@ jobs:
         images:
           - tag: eln
             repo: eln.repo
-            excludes: dnf-bootc dnf-yum
+            excludes: dnf-bootc dnf-yum rhc
           - tag: a9
             repo: almalinux9.repo
           - tag: a10s
