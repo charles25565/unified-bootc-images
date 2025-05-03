@@ -1,0 +1,10 @@
+[baseos]
+name=BaseOS
+metalink=https://mirrors.fedoraproject.org/metalink?repo=eln-baseos-1&arch=$basearch
+enabled=1
+gpgcheck=0
+[appstream]
+name=AppStream
+metalink=https://mirrors.fedoraproject.org/metalink?repo=eln-appstream-1&arch=$basearch
+enabled=1
+gpgcheck=0

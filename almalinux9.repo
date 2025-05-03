@@ -1,0 +1,10 @@
+[baseos]
+name=BaseOS
+baseurl=https://vault.almalinux.org/9.6-beta/BaseOS/$basearch/os/
+enabled=1
+gpgcheck=0
+[appstream]
+name=AppStream
+baseurl=https://vault.almalinux.org/9.6-beta/AppStream/$basearch/os/
+enabled=1
+gpgcheck=0
