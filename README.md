@@ -1,5 +1,7 @@
 # Unified bootc Images
 
+[![CI](https://github.com/charles25565/unified-bootc-images/actions/workflows/ci.yml/badge.svg)](https://github.com/charles25565/unified-bootc-images/actions/workflows/ci.yml)
+
 This is an innovative project that provides a generic codebase to create multiple bootc images.
 
 ## Adding a new image
