@@ -44,7 +44,7 @@ jobs:
       - name: Login to container registry
         run: echo ${{secrets.GITHUB_TOKEN}} | podman login -u ${{github.actor}} --password-stdin ghcr.io
       - name: Build image
-        run: podman build --security-opt=label=disable --cap-add=all --device /dev/fuse --build-arg repo=${{matrix.images.repo}} --build-arg excludes="${{matrix.images.excludes}}" -t ghcr.io/charles25565/unified-bootc-images:${{matrix.images.tag}} .
+        run: podman build --security-opt=label=disable --cap-add=all --device /dev/fuse --build-arg=repo=${{matrix.images.repo}} --build-arg=excludes="${{matrix.images.excludes}}" -t ghcr.io/charles25565/unified-bootc-images:${{matrix.images.tag}} .
       - name: Push image
         if: github.event_name != 'pull_request'
         run: podman push ghcr.io/charles25565/unified-bootc-images:${{matrix.images.tag}}

@@ -14,7 +14,7 @@ This is an innovative project that provides a generic codebase to create multipl
 A lengthy podman command is used for this:
 
 ```bash
-podman build --security-opt=label=disable --cap-add=all --device /dev/fuse --build-arg repo=repo --build-arg excludes="excludes" -t localhost/your-bootc-image .
+podman build --security-opt=label=disable --cap-add=all --device /dev/fuse --build-arg=repo=repo --build-arg=excludes="excludes" -t localhost/your-bootc-image .
 ```
 
 Some arguments you may want to change are:
