@@ -20,4 +20,4 @@ podman build --security-opt=label=disable --cap-add=all --device /dev/fuse --bui
 Some arguments you may want to change are:
 
 * `repo`: Change it to the repo filename accessible from the build context (such as `almalinux9.repo`)
-* `excludes`: Change it to the list of excluded packages. You can find the correct ones by examining the workflow file.
+* `excludes`: Change it to the list of excluded packages. You can find the correct ones by examining the workflow matrix. If it is missing, just leave `excludes` blank.
