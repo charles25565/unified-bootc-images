@@ -42,9 +42,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Login to container registry
-        run: echo ${{secrets.GITHUB_TOKEN}} | podman login -u ${{github.actor}} --password-stdin ghcr.io
-      - name: Build image
-        run: podman build --security-opt=label=disable --cap-add=all --device /dev/fuse --build-arg=repo=${{matrix.images.repo}} --build-arg=excludes="${{matrix.images.excludes}}" -t ghcr.io/charles25565/unified-bootc-images:${{matrix.images.tag}} .
+        run: echo ${{secrets.GITHUB_TOKEN}} | sudo podman login -u ${{github.actor}} --password-stdin ghcr.io
+      - name: Build unoptimized image
+        run: sudo podman build --security-opt=label=disable --cap-add=all --device /dev/fuse --build-arg=repo=${{matrix.images.repo}} --build-arg=excludes="${{matrix.images.excludes}}" -t ghcr.io/charles25565/unified-bootc-images:${{matrix.images.tag}}-unoptimized .
+      - name: Optimize image
+        run: sudo podman run --privileged -v /var/lib/containers:/var/lib/containers quay.io/centos-bootc/centos-bootc:stream10 /usr/libexec/bootc-base-imagectl rechunk ghcr.io/charles25565/unified-bootc-images:${{matrix.images.tag}}-unoptimized ghcr.io/charles25565/unified-bootc-images:${{matrix.images.tag}}
       - name: Push image
         if: github.event_name != 'pull_request'
-        run: podman push ghcr.io/charles25565/unified-bootc-images:${{matrix.images.tag}}
+        run: sudo podman push ghcr.io/charles25565/unified-bootc-images:${{matrix.images.tag}}
