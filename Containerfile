@@ -11,4 +11,3 @@ LABEL containers.bootc 1
 LABEL ostree.bootable 1
 STOPSIGNAL SIGRTMIN+3
 CMD ["/sbin/init"]
-RUN bootc container lint
