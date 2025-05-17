@@ -4,10 +4,6 @@
 
 This is an innovative project that provides a generic codebase to create multiple bootc images.
 
-> [!TIP]
-> #### Where is Rocky Linux?
-> We are waiting for the release of 9.6 so that we can use `bootc-base-imagectl` to build the images.
-
 ## Adding a new image
 
 1. Create a repo file for the distro that has the correct repositories. For EL-like distros, `BaseOS` & `AppStream` are enough. For Fedora, the `Everything` repo is enough. Do not use minor releases. Do not use `$releasever`. Use the existing ones as an example.

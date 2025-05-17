@@ -38,6 +38,8 @@ jobs:
           - tag: f42
             repo: fedora42.repo
             excludes: dnf-yum rhc
+          - tag: r9
+            repo: rockylinux9.repo
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
