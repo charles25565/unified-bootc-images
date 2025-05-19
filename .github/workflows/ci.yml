@@ -25,6 +25,8 @@ jobs:
           - tag: a9
             repo: almalinux9.repo
             excludes: rhc
+          - tag: a10
+            repo: almalinux10.repo
           - tag: a10s
             repo: almalinux10s.repo
             excludes: dnf-bootc dnf-yum rhc
