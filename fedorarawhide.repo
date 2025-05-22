@@ -1,0 +1,5 @@
+[everything]
+name=Everything
+metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-rawhide&arch=$basearch
+enabled=1
+gpgcheck=0

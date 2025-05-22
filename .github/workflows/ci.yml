@@ -44,6 +44,8 @@ jobs:
           - tag: r9
             repo: rockylinux9.repo
             excludes: dnf-bootc rhc
+          - tag: rawhide
+            repo: fedorarawhide.repo
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
