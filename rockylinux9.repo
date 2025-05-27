@@ -1,10 +1,10 @@
 [baseos]
 name=BaseOS
-baseurl=https://nyc.mirrors.clouvider.net/rocky/9.5/BaseOS/$basearch/os/
+baseurl=https://mirror.cs.vt.edu/pub/rocky/9.5/BaseOS/$basearch/os/
 enabled=1
 gpgcheck=0
 [appstream]
 name=AppStream
-baseurl=https://nyc.mirrors.clouvider.net/rocky/9.5/AppStream/$basearch/os/
+baseurl=https://mirror.cs.vt.edu/pub/rocky/9.5/AppStream/$basearch/os/
 enabled=1
 gpgcheck=0
