@@ -44,6 +44,8 @@ jobs:
           - tag: r9
             repo: rockylinux9.repo
             excludes: dnf-bootc rhc
+          - tag: r10
+            repo: rockylinux10.repo
           - tag: rawhide
             repo: fedorarawhide.repo
             excludes: dnf-yum rhc
