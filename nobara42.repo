@@ -1,0 +1,11 @@
+[nobara]
+name=Nobara Copr
+baseurl=https://download.copr.fedorainfracloud.org/results/gloriouseggroll/nobara-42/fedora-42-$basearch/
+enabled=1
+gpgcheck=0
+
+[fedora]
+name=Fedora Everything
+metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-42&arch=$basearch
+enabled=1
+gpgcheck=0
