@@ -4,6 +4,9 @@
 
 This is an innovative project that provides a generic codebase to create multiple bootc images.
 
+> [!IMPORTANT]
+> All images available here are unofficial.
+
 ## Adding a new image
 
 1. Create a repo file for the distro that has the correct repositories.

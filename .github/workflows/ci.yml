@@ -32,9 +32,6 @@ jobs:
           - tag: r10
             repo: rockylinux10.repo
             excludes: rhc
-          - tag: rawhide
-            repo: fedorarawhide.repo
-            excludes: dnf-yum rhc
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
