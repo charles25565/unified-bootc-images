@@ -24,6 +24,7 @@ jobs:
         images:
           - tag: nobara-42
             repo: nobara42.repo
+            excludes: dnf-yum rhc
           - tag: r9
             repo: rockylinux9.repo
             excludes: dnf-bootc rhc
