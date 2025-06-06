@@ -15,7 +15,7 @@ This is an innovative project that provides a generic codebase to create multipl
 - Use the existing ones as an example.
 2. Add your image to the matrix in the workflow file.
 - As for tag, use the usual branch name of each distribution's RPM Git repos. 
-    - For example, `ol10` for Oracle Linux 10, `r9` for Rocky Linux 9, etc.
+    - For example, `ol10` for Oracle Linux 10, `r9` for Rocky Linux 9, `nobara-41` for Nobara 41, etc.
 - You will need to configure the excludes yourself in a separate commit.
 
 ## Building

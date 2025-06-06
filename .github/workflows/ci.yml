@@ -22,6 +22,8 @@ jobs:
     strategy:
       matrix:
         images:
+          - tag: nobara-42
+            repo: nobara42.repo
           - tag: r9
             repo: rockylinux9.repo
             excludes: dnf-bootc rhc
