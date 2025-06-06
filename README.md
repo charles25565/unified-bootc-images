@@ -11,11 +11,12 @@ This is an innovative project that provides a generic codebase to create multipl
 
 1. Create a repo file for the distro that has the correct repositories.
 - `BaseOS` & `AppStream` are enough.
-- Do not use `$releasever`. Use the existing ones as an example.
+- Do not use `$releasever`.
+- Use the existing ones as an example.
 2. Add your image to the matrix in the workflow file.
 - As for tag, use the usual branch name of each distribution's RPM Git repos. 
     - For example, `ol10` for Oracle Linux 10, `r9` for Rocky Linux 9, etc.
-    - You will need to configure the excludes yourself in a separate commit.
+- You will need to configure the excludes yourself in a separate commit.
 
 ## Building
 
