@@ -24,8 +24,10 @@ jobs:
         images:
           - tag: ol9
             repo: oraclelinux9.repo
+            excludes: rhc subscription-manager toolbox
           - tag: ol10
             repo: oraclelinux10.repo
+            excludes: dnf-bootc rhc subscription-manager toolbox
           - tag: r9
             repo: rockylinux9.repo
             excludes: dnf-bootc rhc
