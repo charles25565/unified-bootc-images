@@ -1,13 +1,15 @@
 name: CI
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
     paths:
       - "*.repo"
       - "Containerfile"
       - ".github/workflows/ci.yml"
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
     paths:
       - "*.repo"
       - "Containerfile"
