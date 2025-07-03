@@ -1,0 +1,11 @@
+[baseos]
+name=BaseOS
+baseurl=https://mirror.stream.centos.org/9-stream/BaseOS/$basearch/os/
+enabled=1
+gpgcheck=0
+
+[appstream]
+name=AppStream
+baseurl=https://mirror.stream.centos.org/9-stream/AppStream/$basearch/os/
+enabled=1
+gpgcheck=0
