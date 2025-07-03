@@ -24,10 +24,6 @@ jobs:
     strategy:
       matrix:
         images:
-          - tag: c9s
-            repo: centosstream9.repo
-          - tag: c10s
-            repo: centosstream10.repo
           - tag: eln
             repo: eln.repo
             excludes: dnf-bootc dnf-yum rhc
