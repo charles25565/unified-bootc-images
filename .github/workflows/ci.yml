@@ -40,6 +40,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Login to container registry
+        if: github.event_name != 'pull_request'
         run: echo ${{secrets.GITHUB_TOKEN}} | sudo podman login -u ${{github.actor}} --password-stdin ghcr.io
       - name: Build unoptimized image
         run: sudo podman build --no-cache --layers=false --security-opt=label=disable --cap-add=all --device /dev/fuse --build-arg=repo=${{matrix.images.repo}} --build-arg=excludes="${{matrix.images.excludes}}" -t ghcr.io/charles25565/unified-bootc-images:${{matrix.images.tag}}-unoptimized .
